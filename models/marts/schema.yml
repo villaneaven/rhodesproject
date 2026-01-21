@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: "Order level fact table."
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+      - name: sales
+        tests:
+          - not_null
+
+  - name: dim_customers
+    description: "Customer dimension table."
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
